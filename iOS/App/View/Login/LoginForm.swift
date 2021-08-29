@@ -21,6 +21,7 @@ struct LoginForm: View {
         }
 
     var body: some View {
+        VStack{
         Form {
             
             TextField("Username", text: $loginVM.email)
@@ -43,7 +44,12 @@ struct LoginForm: View {
             }
             
         }.buttonStyle(PlainButtonStyle())
-        .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+        
+    }.background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+        .disabled(loginVM.showProgressView)
+        .alert(item: $loginVM.error) { error in
+            Alert(title: Text("Login Inválido"), message: Text(error.localizedDescription))
+        }
     }
 }
 

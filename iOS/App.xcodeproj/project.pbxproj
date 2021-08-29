@@ -22,6 +22,7 @@
 		FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03E26DB20FD00A5A571 /* BottomView.swift */; };
 		FE42F04326DB211200A5A571 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04226DB211200A5A571 /* LoginView.swift */; };
 		FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04626DB2BDD00A5A571 /* LoginForm.swift */; };
+		FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FE42F03E26DB20FD00A5A571 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		FE42F04226DB211200A5A571 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE42F04626DB2BDD00A5A571 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,8 @@
 		332C227923FEBCE0007823E5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FE42F03226DB207200A5A571 /* Components */,
 				FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */,
+				FE42F03226DB207200A5A571 /* Components */,
 				FE42EFD026DB000B00A5A571 /* Model */,
 				FE42EFFC26DB072600A5A571 /* View */,
 				FE42EFD326DB002500A5A571 /* ViewModel */,
@@ -162,6 +164,7 @@
 		FE42EFFC26DB072600A5A571 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F05126DB3C8300A5A571 /* Objectives */,
 				FE42F03126DB201700A5A571 /* Home */,
 				FE42F04C26DB396300A5A571 /* Login */,
 			);
@@ -193,6 +196,14 @@
 				FE42F04226DB211200A5A571 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FE42F05126DB3C8300A5A571 /* Objectives */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */,
+			);
+			path = Objectives;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */,
 				FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */,
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
 				FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */,

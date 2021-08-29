@@ -32,11 +32,8 @@ struct LoginView: View {
             .padding(.top, view.size.height * 0.3)
             
             .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)).edgesIgnoringSafeArea(.all))
-            .disabled(loginVM.showProgressView)
-            .alert(item: $loginVM.error) { error in
-                Alert(title: Text("Login Inválido"), message: Text(error.localizedDescription))
-                
-            }
+            
+            
         }
     }
 }

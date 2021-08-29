@@ -9,13 +9,18 @@
 import SwiftUI
 
 @main
-struct DesafioWarrenApp: App {
-    
+struct SwiftuiTestApp: App {
+    @StateObject var authentication = Authentication()
     var body: some Scene {
         WindowGroup {
-            
+            if authentication.isValidated {
+                ObjectiveListView()
+                    .environmentObject(authentication)
+            } else {
                 HomeLoginView()
-           
+                    .environmentObject(authentication)
+            }
+            
         }
     }
 }
