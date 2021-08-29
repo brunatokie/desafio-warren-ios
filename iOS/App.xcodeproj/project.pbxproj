@@ -17,6 +17,10 @@
 		FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02126DB0BAF00A5A571 /* Authentication.swift */; };
 		FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02926DB0D3600A5A571 /* APIService.swift */; };
 		FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */; };
+		FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */; };
+		FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03A26DB20E900A5A571 /* HeaderView.swift */; };
+		FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03E26DB20FD00A5A571 /* BottomView.swift */; };
+		FE42F04326DB211200A5A571 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04226DB211200A5A571 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		FE42F02126DB0BAF00A5A571 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		FE42F02926DB0D3600A5A571 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColor.swift; sourceTree = "<group>"; };
+		FE42F03A26DB20E900A5A571 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FE42F03E26DB20FD00A5A571 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		FE42F04226DB211200A5A571 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		332C227923FEBCE0007823E5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F03226DB207200A5A571 /* Components */,
 				FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */,
 				FE42EFD026DB000B00A5A571 /* Model */,
 				FE42EFFC26DB072600A5A571 /* View */,
@@ -160,8 +169,19 @@
 			isa = PBXGroup;
 			children = (
 				FE42EFF826DB071200A5A571 /* HomeLoginView.swift */,
+				FE42F03A26DB20E900A5A571 /* HeaderView.swift */,
+				FE42F03E26DB20FD00A5A571 /* BottomView.swift */,
+				FE42F04226DB211200A5A571 /* LoginView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FE42F03226DB207200A5A571 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */,
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
 				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
+				FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */,
 				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
 				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
 				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
 				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
+				FE42F04326DB211200A5A571 /* LoginView.swift in Sources */,
+				FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
