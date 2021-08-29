@@ -14,8 +14,8 @@
 		FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42EFF826DB071200A5A571 /* HomeLoginView.swift */; };
 		FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */; };
 		FE42F01626DB0AB700A5A571 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01526DB0AB700A5A571 /* Models.swift */; };
-		FE42F01A26DB0B0600A5A571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01926DB0B0600A5A571 /* LoginViewModel.swift */; };
-		FE42F01E26DB0B1900A5A571 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01D26DB0B1900A5A571 /* APIServices.swift */; };
+		FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02126DB0BAF00A5A571 /* Authentication.swift */; };
+		FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02926DB0D3600A5A571 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,8 @@
 		FE42EFF826DB071200A5A571 /* HomeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeLoginView.swift; path = App/View/HomeLoginView.swift; sourceTree = SOURCE_ROOT; };
 		FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioWarrenApp.swift; sourceTree = "<group>"; };
 		FE42F01526DB0AB700A5A571 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		FE42F01926DB0B0600A5A571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		FE42F01D26DB0B1900A5A571 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		FE42F02126DB0BAF00A5A571 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		FE42F02926DB0D3600A5A571 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,8 @@
 		FE42EFD126DB001700A5A571 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FE42F01D26DB0B1900A5A571 /* APIServices.swift */,
+				FE42F02126DB0BAF00A5A571 /* Authentication.swift */,
+				FE42F02926DB0D3600A5A571 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -140,7 +141,6 @@
 		FE42EFD326DB002500A5A571 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FE42F01926DB0B0600A5A571 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,11 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE42F01A26DB0B0600A5A571 /* LoginViewModel.swift in Sources */,
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
+				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
 				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
 				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
-				FE42F01E26DB0B1900A5A571 /* APIServices.swift in Sources */,
+				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
