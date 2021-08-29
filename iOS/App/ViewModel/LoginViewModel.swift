@@ -47,8 +47,9 @@ class LoginViewModel: ObservableObject {
             case .failure(let error):
                 
                 DispatchQueue.main.async {
-                    self.showProgressView = false
+                    
                     self.error = error
+                    self.showProgressView = false
                     completion(false)
                 }
                

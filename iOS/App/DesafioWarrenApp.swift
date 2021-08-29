@@ -14,7 +14,7 @@ struct SwiftuiTestApp: App {
     var body: some Scene {
         WindowGroup {
             if authentication.isValidated {
-                ObjectiveListView()
+                ObjectivesListView()
                     .environmentObject(authentication)
             } else {
                 HomeLoginView()

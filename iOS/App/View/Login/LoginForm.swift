@@ -33,7 +33,6 @@ struct LoginForm: View {
                 Button(action: {
                     loginVM.login { success in
                         authentication.updateValidation(success: success)
-                        self.showModal = false
                     }
                     
                 }) {
@@ -43,7 +42,7 @@ struct LoginForm: View {
                 }
             }
             
-        }.buttonStyle(PlainButtonStyle())
+        }
         
     }.background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
         .disabled(loginVM.showProgressView)

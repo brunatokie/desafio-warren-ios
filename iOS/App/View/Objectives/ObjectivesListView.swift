@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ObjectiveListView: View {
+struct ObjectivesListView: View {
     @EnvironmentObject var authentication: Authentication
     
     var body: some View {
@@ -31,6 +31,6 @@ struct ObjectiveListView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ObjectiveListView()
+        ObjectivesListView()
     }
 }
