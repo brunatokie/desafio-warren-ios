@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		332C227B23FEBCE0007823E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C227A23FEBCE0007823E5 /* AppDelegate.swift */; };
 		332C228123FEBCE1007823E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332C228023FEBCE1007823E5 /* Assets.xcassets */; };
 		332C228423FEBCE1007823E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332C228323FEBCE1007823E5 /* Preview Assets.xcassets */; };
 		332C228723FEBCE1007823E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */; };
 		332C229223FEBCE1007823E5 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C229123FEBCE1007823E5 /* AppUITests.swift */; };
+		FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42EFF826DB071200A5A571 /* HomeLoginView.swift */; };
+		FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */; };
+		FE42F01626DB0AB700A5A571 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01526DB0AB700A5A571 /* Models.swift */; };
+		FE42F01A26DB0B0600A5A571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01926DB0B0600A5A571 /* LoginViewModel.swift */; };
+		FE42F01E26DB0B1900A5A571 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01D26DB0B1900A5A571 /* APIServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		332C227723FEBCE0007823E5 /* Warren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warren.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		332C227A23FEBCE0007823E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332C228023FEBCE1007823E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		332C228323FEBCE1007823E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		332C228623FEBCE1007823E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,11 @@
 		332C228D23FEBCE1007823E5 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		332C229123FEBCE1007823E5 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		332C229323FEBCE1007823E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE42EFF826DB071200A5A571 /* HomeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeLoginView.swift; path = App/View/HomeLoginView.swift; sourceTree = SOURCE_ROOT; };
+		FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioWarrenApp.swift; sourceTree = "<group>"; };
+		FE42F01526DB0AB700A5A571 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FE42F01926DB0B0600A5A571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FE42F01D26DB0B1900A5A571 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +84,11 @@
 		332C227923FEBCE0007823E5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */,
 				FE42EFD026DB000B00A5A571 /* Model */,
-				FE42EFD226DB001F00A5A571 /* View */,
+				FE42EFFC26DB072600A5A571 /* View */,
 				FE42EFD326DB002500A5A571 /* ViewModel */,
 				FE42EFD126DB001700A5A571 /* Services */,
-				332C227A23FEBCE0007823E5 /* AppDelegate.swift */,
 				332C228023FEBCE1007823E5 /* Assets.xcassets */,
 				332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */,
 				332C228823FEBCE1007823E5 /* Info.plist */,
@@ -116,6 +124,7 @@
 		FE42EFD026DB000B00A5A571 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F01526DB0AB700A5A571 /* Models.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,22 +132,25 @@
 		FE42EFD126DB001700A5A571 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F01D26DB0B1900A5A571 /* APIServices.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		FE42EFD226DB001F00A5A571 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		FE42EFD326DB002500A5A571 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F01926DB0B0600A5A571 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE42EFFC26DB072600A5A571 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE42EFF826DB071200A5A571 /* HomeLoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332C227B23FEBCE0007823E5 /* AppDelegate.swift in Sources */,
+				FE42F01A26DB0B0600A5A571 /* LoginViewModel.swift in Sources */,
+				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
+				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
+				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
+				FE42F01E26DB0B1900A5A571 /* APIServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
