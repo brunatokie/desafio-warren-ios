@@ -52,10 +52,13 @@ struct BottomView: View {
             
                     .navigationBarItems(leading: Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
+                        self.showModal = false
                     }) {
                         Image("cancel")
                             .resizable()
                             .frame(width: 20, height: 20, alignment: .leading)
+                            .foregroundColor(.white)
+                            
                     }
                     )
                     .navigationBarColor(backgroundColor: #colorLiteral(red: 0.4588235294, green: 0.462745098, blue: 0.5019607843, alpha: 1), tintColor: .white)

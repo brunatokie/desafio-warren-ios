@@ -11,41 +11,32 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject private var loginVM = LoginViewModel()
-    @EnvironmentObject var authentication: Authentication
     @Binding var showModal: Bool
     
     var body: some View {
-        
-        VStack {
+        GeometryReader { view in
             
-            Form {
+            VStack (spacing: .none){
                 
-                TextField("Username", text: $loginVM.email)
-                HStack {
-                    SecureField("Password", text: $loginVM.password)
-                    if loginVM.showProgressView {
-                        ProgressView()
-                    }
-                    Button(action: {
-
-                        
-                    }) {
-                        Image("right")
-                            .resizable()
-                            .frame(width: 30, height: 30, alignment: .leading)
-                    }
+                LoginForm(showModal: _showModal)
+                
+                
+                Button("Esqueci a senha") {
+                    
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.white)
+                .padding(.bottom, view.size.height * 0.45)
+                .padding(.leading,25)
+            }
+            .padding(.top, view.size.height * 0.3)
+            
+            .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)).edgesIgnoringSafeArea(.all))
+            .disabled(loginVM.showProgressView)
+            .alert(item: $loginVM.error) { error in
+                Alert(title: Text("Login Inválido"), message: Text(error.localizedDescription))
                 
-            }.buttonStyle(PlainButtonStyle())
-            .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
-           
-        }
-        
-        
-        .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
-        .disabled(loginVM.showProgressView)
-        .alert(item: $loginVM.error) { error in
-            Alert(title: Text("Login Inválido"), message: Text(error.localizedDescription))
+            }
         }
     }
 }

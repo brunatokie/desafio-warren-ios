@@ -21,6 +21,7 @@
 		FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03A26DB20E900A5A571 /* HeaderView.swift */; };
 		FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03E26DB20FD00A5A571 /* BottomView.swift */; };
 		FE42F04326DB211200A5A571 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04226DB211200A5A571 /* LoginView.swift */; };
+		FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04626DB2BDD00A5A571 /* LoginForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		FE42F03A26DB20E900A5A571 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FE42F03E26DB20FD00A5A571 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		FE42F04226DB211200A5A571 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FE42F04626DB2BDD00A5A571 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				FE42F03A26DB20E900A5A571 /* HeaderView.swift */,
 				FE42F03E26DB20FD00A5A571 /* BottomView.swift */,
 				FE42F04226DB211200A5A571 /* LoginView.swift */,
+				FE42F04626DB2BDD00A5A571 /* LoginForm.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */,
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
+				FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */,
 				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
 				FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */,
 				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
