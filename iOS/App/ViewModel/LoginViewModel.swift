@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import KeychainAccess
 
 class LoginViewModel: ObservableObject {
    
     var email: String = ""
     var password: String = ""
+    var acessTokenRef: Data?
+    var refreshTokenRef: Data?
    
     @Published var error: Authentication.AuthenticationError?
     @Published var showProgressView = false
@@ -23,7 +26,8 @@ class LoginViewModel: ObservableObject {
     
     func login(completion: @escaping (Bool) -> Void) {
         self.showProgressView = true
-       
+        let keychain = Keychain(service: "login")
+        
         APIService().loginRequest(email: email, password: password) { result in
             
             switch result {
@@ -31,8 +35,11 @@ class LoginViewModel: ObservableObject {
         
                 do {
                    
-                    if let response = response.accessToken {
-                        //add access Token and Refresh Token in keychain
+                    if let token = response.accessToken, let refreshToken = response.refreshToken {
+                    try keychain.set(token, key: "acessToken")
+                    self.acessTokenRef = keychain[attributes: "acessToken"]?.persistentRef
+                    try keychain.set(String(refreshToken), key: "refreshToken")
+                    self.refreshTokenRef = keychain[attributes: "refreshToken"]?.persistentRef
                     }
                     DispatchQueue.main.async {
                         self.showProgressView = false

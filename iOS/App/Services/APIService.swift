@@ -43,4 +43,31 @@ class APIService {
             completion(.success(loginResponse))
         }.resume()
     }
+    
+    func getAllObjectives(token: String, completion: @escaping (Result<[Portfolio], NetworkError>) -> Void) {
+        
+        guard let url = URL(string: "https://enigmatic-bayou-48219.herokuapp.com/api/v2/portfolios/mine") else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.addValue(token, forHTTPHeaderField: "acess-token")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let data = data, error == nil else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            guard let accounts = try? JSONDecoder().decode([Portfolio].self, from: data) else {
+                completion(.failure(.decodingError))
+                return
+            }
+            
+            completion(.success(accounts))
+            print(accounts)
+        }.resume()
+    }
 }
