@@ -16,6 +16,7 @@
 		FE42F01626DB0AB700A5A571 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01526DB0AB700A5A571 /* Models.swift */; };
 		FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02126DB0BAF00A5A571 /* Authentication.swift */; };
 		FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02926DB0D3600A5A571 /* APIService.swift */; };
+		FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +38,12 @@
 		332C228D23FEBCE1007823E5 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		332C229123FEBCE1007823E5 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		332C229323FEBCE1007823E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE42EFF826DB071200A5A571 /* HomeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeLoginView.swift; path = App/View/HomeLoginView.swift; sourceTree = SOURCE_ROOT; };
+		FE42EFF826DB071200A5A571 /* HomeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeLoginView.swift; path = App/View/Home/HomeLoginView.swift; sourceTree = SOURCE_ROOT; };
 		FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioWarrenApp.swift; sourceTree = "<group>"; };
 		FE42F01526DB0AB700A5A571 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		FE42F02126DB0BAF00A5A571 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		FE42F02926DB0D3600A5A571 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		FE42EFD326DB002500A5A571 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,9 +151,17 @@
 		FE42EFFC26DB072600A5A571 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE42EFF826DB071200A5A571 /* HomeLoginView.swift */,
+				FE42F03126DB201700A5A571 /* Home */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FE42F03126DB201700A5A571 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE42EFF826DB071200A5A571 /* HomeLoginView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
 				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
+				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
 				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
 				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
 				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
