@@ -3,17 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		332C227B23FEBCE0007823E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C227A23FEBCE0007823E5 /* AppDelegate.swift */; };
-		332C227D23FEBCE0007823E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C227C23FEBCE0007823E5 /* SceneDelegate.swift */; };
 		332C228123FEBCE1007823E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332C228023FEBCE1007823E5 /* Assets.xcassets */; };
 		332C228423FEBCE1007823E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332C228323FEBCE1007823E5 /* Preview Assets.xcassets */; };
 		332C228723FEBCE1007823E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */; };
 		332C229223FEBCE1007823E5 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C229123FEBCE1007823E5 /* AppUITests.swift */; };
-		332C229E23FEBDD9007823E5 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = 332C229D23FEBDD9007823E5 /* Modules */; };
+		FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42EFF826DB071200A5A571 /* HomeLoginView.swift */; };
+		FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */; };
+		FE42F01626DB0AB700A5A571 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F01526DB0AB700A5A571 /* Models.swift */; };
+		FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02126DB0BAF00A5A571 /* Authentication.swift */; };
+		FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02926DB0D3600A5A571 /* APIService.swift */; };
+		FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */; };
+		FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */; };
+		FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03A26DB20E900A5A571 /* HeaderView.swift */; };
+		FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F03E26DB20FD00A5A571 /* BottomView.swift */; };
+		FE42F04326DB211200A5A571 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04226DB211200A5A571 /* LoginView.swift */; };
+		FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04626DB2BDD00A5A571 /* LoginForm.swift */; };
+		FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +37,6 @@
 
 /* Begin PBXFileReference section */
 		332C227723FEBCE0007823E5 /* Warren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warren.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		332C227A23FEBCE0007823E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		332C227C23FEBCE0007823E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		332C228023FEBCE1007823E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		332C228323FEBCE1007823E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		332C228623FEBCE1007823E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +44,18 @@
 		332C228D23FEBCE1007823E5 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		332C229123FEBCE1007823E5 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		332C229323FEBCE1007823E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE42EFF826DB071200A5A571 /* HomeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeLoginView.swift; path = App/View/Home/HomeLoginView.swift; sourceTree = SOURCE_ROOT; };
+		FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioWarrenApp.swift; sourceTree = "<group>"; };
+		FE42F01526DB0AB700A5A571 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FE42F02126DB0BAF00A5A571 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		FE42F02926DB0D3600A5A571 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColor.swift; sourceTree = "<group>"; };
+		FE42F03A26DB20E900A5A571 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FE42F03E26DB20FD00A5A571 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		FE42F04226DB211200A5A571 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FE42F04626DB2BDD00A5A571 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332C229E23FEBDD9007823E5 /* Modules in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +98,12 @@
 		332C227923FEBCE0007823E5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				332C227A23FEBCE0007823E5 /* AppDelegate.swift */,
-				332C227C23FEBCE0007823E5 /* SceneDelegate.swift */,
+				FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */,
+				FE42F03226DB207200A5A571 /* Components */,
+				FE42EFD026DB000B00A5A571 /* Model */,
+				FE42EFFC26DB072600A5A571 /* View */,
+				FE42EFD326DB002500A5A571 /* ViewModel */,
+				FE42EFD126DB001700A5A571 /* Services */,
 				332C228023FEBCE1007823E5 /* Assets.xcassets */,
 				332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */,
 				332C228823FEBCE1007823E5 /* Info.plist */,
@@ -114,6 +136,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE42EFD026DB000B00A5A571 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F01526DB0AB700A5A571 /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE42EFD126DB001700A5A571 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F02126DB0BAF00A5A571 /* Authentication.swift */,
+				FE42F02926DB0D3600A5A571 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FE42EFD326DB002500A5A571 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE42EFFC26DB072600A5A571 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F05126DB3C8300A5A571 /* Objectives */,
+				FE42F03126DB201700A5A571 /* Home */,
+				FE42F04C26DB396300A5A571 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE42F03126DB201700A5A571 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE42EFF826DB071200A5A571 /* HomeLoginView.swift */,
+				FE42F03A26DB20E900A5A571 /* HeaderView.swift */,
+				FE42F03E26DB20FD00A5A571 /* BottomView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE42F03226DB207200A5A571 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE42F04C26DB396300A5A571 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F04226DB211200A5A571 /* LoginView.swift */,
+				FE42F04626DB2BDD00A5A571 /* LoginForm.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FE42F05126DB3C8300A5A571 /* Objectives */ = {
+			isa = PBXGroup;
+			children = (
+				FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */,
+			);
+			path = Objectives;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,7 +223,6 @@
 			);
 			name = App;
 			packageProductDependencies = (
-				332C229D23FEBDD9007823E5 /* Modules */,
 			);
 			productName = App;
 			productReference = 332C227723FEBCE0007823E5 /* Warren.app */;
@@ -218,8 +309,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332C227B23FEBCE0007823E5 /* AppDelegate.swift in Sources */,
-				332C227D23FEBCE0007823E5 /* SceneDelegate.swift in Sources */,
+				FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */,
+				FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */,
+				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
+				FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */,
+				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
+				FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */,
+				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
+				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
+				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
+				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
+				FE42F04326DB211200A5A571 /* LoginView.swift in Sources */,
+				FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -474,13 +575,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		332C229D23FEBDD9007823E5 /* Modules */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Modules;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 332C226F23FEBCE0007823E5 /* Project object */;
 }
