@@ -36,15 +36,17 @@ class LoginViewModel: ObservableObject {
                 do {
                    
                     if let token = response.accessToken, let refreshToken = response.refreshToken {
+                       
                     try keychain.set(token, key: "acessToken")
+                        self.acessTokenRef = keychain[attributes: "acessToken"]?.persistentRef
                     try keychain.set(String(refreshToken), key: "refreshToken")
-                   
+                        DispatchQueue.main.async {
+                            self.showProgressView = false
+                            
+                            completion(true)
+                            }
                     }
-                    DispatchQueue.main.async {
-                        self.showProgressView = false
-                        
-                        completion(true)
-                        }
+                    
                 }
                 catch let error {
                     print(error)

@@ -12,6 +12,7 @@ struct LoginForm: View {
     
     
     @StateObject private var loginVM = LoginViewModel()
+    @StateObject private var objectiveVM = ObjectiveListViewModel()
     @Binding var showModal: Bool
     @EnvironmentObject var authentication: Authentication
     
@@ -34,6 +35,7 @@ struct LoginForm: View {
                         loginVM.login { success in
                             authentication.updateValidation(success: success)
                             showModal = false
+                            objectiveVM.getAllAccounts()
                         }
                     }) {
                         Image("right")

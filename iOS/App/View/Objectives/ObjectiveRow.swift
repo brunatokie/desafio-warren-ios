@@ -12,14 +12,14 @@ import URLImage
 struct ObjectiveRow: View {
     
     
-    var objetivos: Portfolio
+    var objetivos: ObjectiveViewModel
     @StateObject private var objectiveListVM = ObjectiveListViewModel()
     
     var body: some View {
         GeometryReader { view in
             ZStack(alignment: .top){
                 
-                if let url = URL(string: objetivos.background.small ){
+                if let url = URL(string: objetivos.imageSmall ){
                     URLImage(url) { image in
                         image
                             .resizable()
@@ -35,12 +35,12 @@ struct ObjectiveRow: View {
                 }
                 
                 VStack {
-                    Text(objetivos.name)
+                    Text(objetivos.title)
                         .font(.system(size: 20, weight: .heavy, design: .default))
                         .foregroundColor(.white)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.top, 20)
-                    Text(String(objetivos.totalBalance))
+                    Text(objetivos.balance)
                         .font(.system(size: 20, weight: .heavy, design: .default))
                         .foregroundColor(.white)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -55,9 +55,3 @@ struct ObjectiveRow: View {
 }
 
 
-struct Objective_Previews: PreviewProvider {
-    static var previews: some View {
-        ObjectiveRow(objetivos: objetivos[0])
-            .previewLayout(.fixed(width: 600, height: 500))
-    }
-}

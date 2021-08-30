@@ -19,8 +19,8 @@ struct Objectives: Codable {
 }
 
 
-struct Portfolio: Codable, Identifiable {
-    let id: String
+struct Portfolio: Codable {
+//    let id: String
     let name: String
     let background: Background
     let totalBalance: Double
@@ -28,7 +28,7 @@ struct Portfolio: Codable, Identifiable {
     let goalDate: String
 
     enum CodingKeys: String, CodingKey {
-        case id = "_id"
+//        case id = "_id"
         case name, background, totalBalance, goalAmount, goalDate
     }
 }

@@ -27,26 +27,29 @@ struct ObjectivesListView: View {
                 VStack{
                     ObjectiveHeaderView()
                         .frame(width: view.size.width, height: 200, alignment: .top)
-                    List(objetivos) { obj in
-                        NavigationLink(destination:
-                                        ObjectiveDetailView(objetivos: obj)){
-                            ObjectiveRow(objetivos: obj)
-                                .frame(width: view.size.width, height: 180)
-                                .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
-                        }
-                    }
-                    .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
                     
-                    .navigationTitle("")
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button("Sair") {
-                                authentication.updateValidation(success: false)
+                   
+                        List(objectiveVM.objectives, id: \.id) { obj in
+                            NavigationLink(destination:
+                                            ObjectiveDetailView(objetivos: obj)){
+                                ObjectiveRow(objetivos: obj)
+                                    .frame(width: view.size.width, height: 180)
+                                    .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                            }
+                        }
+                        .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                        
+                        .navigationTitle("")
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button("Sair") {
+                                    authentication.updateValidation(success: false)
+                                }
                             }
                         }
                     }
                 }
-            }
+            
             .edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
     }

@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ObjectiveDetailForm: View {
+    
+    var objetivos: ObjectiveViewModel
     var body: some View {
         GeometryReader { view in
             Form {
@@ -18,7 +20,7 @@ struct ObjectiveDetailForm: View {
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text("0,00")
+                        Text(objetivos.progress)
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     }
@@ -27,7 +29,7 @@ struct ObjectiveDetailForm: View {
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text("0,00")
+                        Text(objetivos.goalAmount)
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     }
@@ -36,7 +38,7 @@ struct ObjectiveDetailForm: View {
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text("0,00")
+                        Text(objetivos.goalDate)
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     }                    
@@ -47,10 +49,5 @@ struct ObjectiveDetailForm: View {
             .frame(width: view.size.width, height: 400)
             .padding(.top, 20)
         }
-    }
-}
-struct ObjectiveDetailForm_Previews: PreviewProvider {
-    static var previews: some View {
-        ObjectiveDetailForm()
     }
 }
