@@ -37,9 +37,8 @@ class LoginViewModel: ObservableObject {
                    
                     if let token = response.accessToken, let refreshToken = response.refreshToken {
                     try keychain.set(token, key: "acessToken")
-                    self.acessTokenRef = keychain[attributes: "acessToken"]?.persistentRef
                     try keychain.set(String(refreshToken), key: "refreshToken")
-                    self.refreshTokenRef = keychain[attributes: "refreshToken"]?.persistentRef
+                   
                     }
                     DispatchQueue.main.async {
                         self.showProgressView = false

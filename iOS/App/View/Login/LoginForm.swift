@@ -21,7 +21,7 @@ struct LoginForm: View {
         }
 
     var body: some View {
-        VStack{
+        VStack (spacing: .zero){
         Form {
             
             TextField("Username", text: $loginVM.email)
@@ -33,6 +33,7 @@ struct LoginForm: View {
                 Button(action: {
                     loginVM.login { success in
                         authentication.updateValidation(success: success)
+                        showModal = false
                     }
                     
                 }) {
@@ -43,6 +44,13 @@ struct LoginForm: View {
             }
             
         }
+            Button("Esqueci a senha") {
+                
+            }
+           
+            .foregroundColor(.white)
+            .padding(.leading,25)
+            .foregroundColor(.white)
         
     }.background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
         .disabled(loginVM.showProgressView)

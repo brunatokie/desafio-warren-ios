@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 class APIService {
 
@@ -71,3 +72,5 @@ class APIService {
         }.resume()
     }
 }
+
+

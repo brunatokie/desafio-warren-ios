@@ -19,7 +19,7 @@ struct Objectives: Codable {
 }
 
 
-struct Portfolio: Codable {
+struct Portfolio: Codable, Identifiable {
     let id: String
     let name: String
     let background: Background

@@ -24,7 +24,15 @@
 		FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04626DB2BDD00A5A571 /* LoginForm.swift */; };
 		FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */; };
 		FE42F05B26DB457E00A5A571 /* ObjectiveListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */; };
-		FE42F06026DB45F600A5A571 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FE42F05F26DB45F600A5A571 /* KeychainAccess */; };
+		FE575EED26DBFDFC007123D4 /* ObjectiveRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */; };
+		FE575EF126DC09DE007123D4 /* objetivos.json in Resources */ = {isa = PBXBuildFile; fileRef = FE575EF026DC09DE007123D4 /* objetivos.json */; };
+		FE575EF526DC0A75007123D4 /* Objetivos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575EF426DC0A75007123D4 /* Objetivos.swift */; };
+		FE575F0926DC20D1007123D4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F0826DC20D1007123D4 /* ImageLoader.swift */; };
+		FE575F0D26DC2455007123D4 /* ObjectiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */; };
+		FE575F2126DC489F007123D4 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2026DC489F007123D4 /* URLImageStore */; };
+		FE575F2326DC489F007123D4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2226DC489F007123D4 /* URLImage */; };
+		FE575F2826DC48BD007123D4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2726DC48BD007123D4 /* KeychainAccess */; };
+		FE575F2E26DC4960007123D4 /* ObjectiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F2D26DC4960007123D4 /* ObjectiveHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,12 @@
 		FE42F04626DB2BDD00A5A571 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesListView.swift; sourceTree = "<group>"; };
 		FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveListViewModel.swift; sourceTree = "<group>"; };
+		FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveRow.swift; sourceTree = "<group>"; };
+		FE575EF026DC09DE007123D4 /* objetivos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = objetivos.json; sourceTree = "<group>"; };
+		FE575EF426DC0A75007123D4 /* Objetivos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objetivos.swift; sourceTree = "<group>"; };
+		FE575F0826DC20D1007123D4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailView.swift; sourceTree = "<group>"; };
+		FE575F2D26DC4960007123D4 /* ObjectiveHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE42F06026DB45F600A5A571 /* KeychainAccess in Frameworks */,
+				FE575F2326DC489F007123D4 /* URLImage in Frameworks */,
+				FE575F2126DC489F007123D4 /* URLImageStore in Frameworks */,
+				FE575F2826DC48BD007123D4 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +128,7 @@
 				332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */,
 				332C228823FEBCE1007823E5 /* Info.plist */,
 				332C228223FEBCE1007823E5 /* Preview Content */,
+				FE575EF026DC09DE007123D4 /* objetivos.json */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				FE42F01526DB0AB700A5A571 /* Models.swift */,
+				FE575EF426DC0A75007123D4 /* Objetivos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +171,7 @@
 			children = (
 				FE42F02126DB0BAF00A5A571 /* Authentication.swift */,
 				FE42F02926DB0D3600A5A571 /* APIService.swift */,
+				FE575F0826DC20D1007123D4 /* ImageLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,9 +188,10 @@
 		FE42EFFC26DB072600A5A571 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE42F05126DB3C8300A5A571 /* Objectives */,
 				FE42F03126DB201700A5A571 /* Home */,
 				FE42F04C26DB396300A5A571 /* Login */,
+				FE42F05126DB3C8300A5A571 /* Objectives */,
+				FE575F3326DC5912007123D4 /* ObjectiveDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,8 +227,18 @@
 			isa = PBXGroup;
 			children = (
 				FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */,
+				FE575F2D26DC4960007123D4 /* ObjectiveHeaderView.swift */,
+				FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */,
 			);
 			path = Objectives;
+			sourceTree = "<group>";
+		};
+		FE575F3326DC5912007123D4 /* ObjectiveDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */,
+			);
+			path = ObjectiveDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +258,9 @@
 			);
 			name = App;
 			packageProductDependencies = (
-				FE42F05F26DB45F600A5A571 /* KeychainAccess */,
+				FE575F2026DC489F007123D4 /* URLImageStore */,
+				FE575F2226DC489F007123D4 /* URLImage */,
+				FE575F2726DC48BD007123D4 /* KeychainAccess */,
 			);
 			productName = App;
 			productReference = 332C227723FEBCE0007823E5 /* Warren.app */;
@@ -281,7 +313,8 @@
 			);
 			mainGroup = 332C226E23FEBCE0007823E5;
 			packageReferences = (
-				FE42F05E26DB45F600A5A571 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */,
+				FE575F2626DC48BD007123D4 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 332C227823FEBCE0007823E5 /* Products */;
 			projectDirPath = "";
@@ -301,6 +334,7 @@
 				332C228723FEBCE1007823E5 /* LaunchScreen.storyboard in Resources */,
 				332C228423FEBCE1007823E5 /* Preview Assets.xcassets in Resources */,
 				332C228123FEBCE1007823E5 /* Assets.xcassets in Resources */,
+				FE575EF126DC09DE007123D4 /* objetivos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,14 +353,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */,
+				FE575EF526DC0A75007123D4 /* Objetivos.swift in Sources */,
 				FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */,
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
 				FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */,
 				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
+				FE575F0D26DC2455007123D4 /* ObjectiveDetailView.swift in Sources */,
+				FE575F0926DC20D1007123D4 /* ImageLoader.swift in Sources */,
+				FE575EED26DBFDFC007123D4 /* ObjectiveRow.swift in Sources */,
 				FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */,
 				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
 				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
 				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
+				FE575F2E26DC4960007123D4 /* ObjectiveHeaderView.swift in Sources */,
 				FE42F05B26DB457E00A5A571 /* ObjectiveListViewModel.swift in Sources */,
 				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
 				FE42F04326DB211200A5A571 /* LoginView.swift in Sources */,
@@ -587,9 +626,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FE42F05E26DB45F600A5A571 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		FE575F2626DC48BD007123D4 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.2.2;
@@ -598,9 +645,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FE42F05F26DB45F600A5A571 /* KeychainAccess */ = {
+		FE575F2026DC489F007123D4 /* URLImageStore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FE42F05E26DB45F600A5A571 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		FE575F2226DC489F007123D4 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		FE575F2726DC48BD007123D4 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE575F2626DC48BD007123D4 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */

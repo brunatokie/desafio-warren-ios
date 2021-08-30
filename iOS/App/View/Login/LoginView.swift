@@ -20,14 +20,7 @@ struct LoginView: View {
                 
                 LoginForm(showModal: _showModal)
                 
-                
-                Button("Esqueci a senha") {
-                    
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .foregroundColor(.white)
-                .padding(.bottom, view.size.height * 0.45)
-                .padding(.leading,25)
+           
             }
             .padding(.top, view.size.height * 0.3)
             

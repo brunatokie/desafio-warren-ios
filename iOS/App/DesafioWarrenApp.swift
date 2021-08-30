@@ -17,7 +17,7 @@ struct SwiftuiTestApp: App {
                 ObjectivesListView()
                     .environmentObject(authentication)
             } else {
-                HomeLoginView()
+                ObjectivesListView()
                     .environmentObject(authentication)
             }
             

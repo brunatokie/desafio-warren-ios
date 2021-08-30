@@ -8,24 +8,48 @@
 
 import SwiftUI
 
+
 struct ObjectivesListView: View {
     @EnvironmentObject var authentication: Authentication
+    @StateObject private var objectiveListVM = ObjectiveListViewModel()
+    
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+                UITableViewCell.appearance().backgroundColor = .clear
+          
+          
+    }
     
     var body: some View {
+        
         NavigationView {
-            VStack {
-                Text("Tela carregou")
-                
-            }
-            .navigationTitle("Meus Objetivos")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Log out") {
-                        authentication.updateValidation(success: false)
+            GeometryReader { view in
+                VStack{
+                    ObjectiveHeaderView()
+                        .frame(width: view.size.width, height: 200, alignment: .top)
+                    List(objetivos) { obj in
+                        NavigationLink(destination:
+                                        ObjectiveDetailView(objetivos: obj)){
+                            ObjectiveRow(objetivos: obj)
+                                .frame(width: view.size.width, height: 180)
+                                .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                           
+                        }
+                    }
+                    .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                    
+                    .navigationTitle("")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Sair") {
+                                authentication.updateValidation(success: false)
+                            }
+                        }
                     }
                 }
             }
-        }
+            .edgesIgnoringSafeArea(.all)
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
