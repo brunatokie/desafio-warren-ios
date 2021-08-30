@@ -17,42 +17,37 @@ struct LoginForm: View {
     
     init(showModal: Binding<Bool>){
         self._showModal = showModal
-            UITableView.appearance().backgroundColor = .clear
-        }
-
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
+        
         VStack (spacing: .zero){
-        Form {
-            
-            TextField("Username", text: $loginVM.email)
-            HStack {
-                SecureField("Password", text: $loginVM.password)
-                if loginVM.showProgressView {
-                    ProgressView()
-                }
-                Button(action: {
-                    loginVM.login { success in
-                        authentication.updateValidation(success: success)
-                        showModal = false
+            Form {
+                TextField("Username", text: $loginVM.email)
+                HStack {
+                    SecureField("Password", text: $loginVM.password)
+                    if loginVM.showProgressView {
+                        ProgressView()
                     }
-                    
-                }) {
-                    Image("right")
-                        .resizable()
-                        .frame(width: 30, height: 30, alignment: .leading)
+                    Button(action: {
+                        loginVM.login { success in
+                            authentication.updateValidation(success: success)
+                            showModal = false
+                        }
+                    }) {
+                        Image("right")
+                            .resizable()
+                            .frame(width: 30, height: 30, alignment: .leading)
+                    }
                 }
             }
-            
-        }
             Button("Esqueci a senha") {
-                
             }
-           
             .foregroundColor(.white)
             .padding(.leading,25)
             .foregroundColor(.white)
-        
-    }.background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+        }.background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
         .disabled(loginVM.showProgressView)
         .alert(item: $loginVM.error) { error in
             Alert(title: Text("Login Inválido"), message: Text(error.localizedDescription))

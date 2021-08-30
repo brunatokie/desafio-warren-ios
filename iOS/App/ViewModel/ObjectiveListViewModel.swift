@@ -43,11 +43,38 @@ struct ObjectiveViewModel {
         return objective.name
     }
     
-    var image: String {
+    var imageSmall: String {
         return objective.background.small
     }
     
-    var balance: Double {
-        return objective.totalBalance
+    var imageRegular: String {
+        return objective.background.regular
+    }
+    
+    var balance: String {
+        let num = objective.totalBalance
+        let numString = String(format: "%.2f", num)
+        return numString
+    }
+    
+    var goalAmount: String {
+        let stNum = String(objective.goalAmount ?? 00)
+        return stNum
+    }
+    
+    var goalDate: String {
+        return convertDateFormater(objective.goalDate)
     }
 }
+
+func convertDateFormater(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        return  dateFormatter.string(from: date!)
+
+    }
+
+

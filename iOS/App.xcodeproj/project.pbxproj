@@ -33,6 +33,8 @@
 		FE575F2326DC489F007123D4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2226DC489F007123D4 /* URLImage */; };
 		FE575F2826DC48BD007123D4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2726DC48BD007123D4 /* KeychainAccess */; };
 		FE575F2E26DC4960007123D4 /* ObjectiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F2D26DC4960007123D4 /* ObjectiveHeaderView.swift */; };
+		FE575F3726DC7B38007123D4 /* ObjectiveDetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */; };
+		FE575F3B26DC813C007123D4 /* ObjectiveDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		FE575F0826DC20D1007123D4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailView.swift; sourceTree = "<group>"; };
 		FE575F2D26DC4960007123D4 /* ObjectiveHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveHeaderView.swift; sourceTree = "<group>"; };
+		FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailForm.swift; sourceTree = "<group>"; };
+		FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */,
+				FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */,
+				FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */,
 			);
 			path = ObjectiveDetail;
 			sourceTree = "<group>";
@@ -362,12 +368,14 @@
 				FE575F0926DC20D1007123D4 /* ImageLoader.swift in Sources */,
 				FE575EED26DBFDFC007123D4 /* ObjectiveRow.swift in Sources */,
 				FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */,
+				FE575F3B26DC813C007123D4 /* ObjectiveDetailImage.swift in Sources */,
 				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
 				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
 				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
 				FE575F2E26DC4960007123D4 /* ObjectiveHeaderView.swift in Sources */,
 				FE42F05B26DB457E00A5A571 /* ObjectiveListViewModel.swift in Sources */,
 				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
+				FE575F3726DC7B38007123D4 /* ObjectiveDetailForm.swift in Sources */,
 				FE42F04326DB211200A5A571 /* LoginView.swift in Sources */,
 				FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */,
 			);

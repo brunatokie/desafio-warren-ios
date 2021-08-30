@@ -15,18 +15,11 @@ struct LoginView: View {
     
     var body: some View {
         GeometryReader { view in
-            
             VStack (spacing: .none){
-                
                 LoginForm(showModal: _showModal)
-                
-           
             }
             .padding(.top, view.size.height * 0.3)
-            
             .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)).edgesIgnoringSafeArea(.all))
-            
-            
         }
     }
 }

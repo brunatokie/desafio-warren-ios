@@ -11,14 +11,14 @@ import SwiftUI
 
 struct ObjectivesListView: View {
     @EnvironmentObject var authentication: Authentication
-    @StateObject private var objectiveListVM = ObjectiveListViewModel()
+    @StateObject private var objectiveVM = ObjectiveListViewModel()
     
-    init() {
-        UITableView.appearance().backgroundColor = .clear
-                UITableViewCell.appearance().backgroundColor = .clear
-          
-          
-    }
+    init(){
+           let navigationBarAppearance = UINavigationBarAppearance()
+           navigationBarAppearance.backgroundColor = UIColor(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1))
+           UIScrollView.appearance().backgroundColor = UIColor(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1))
+        
+       }
     
     var body: some View {
         
@@ -33,7 +33,6 @@ struct ObjectivesListView: View {
                             ObjectiveRow(objetivos: obj)
                                 .frame(width: view.size.width, height: 180)
                                 .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
-                           
                         }
                     }
                     .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))

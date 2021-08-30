@@ -31,7 +31,7 @@ struct BottomView: View {
                 
                 Button(action: {
                     showModal = true
-                   
+                    
                 }){
                     Text("LOGIN")
                         .foregroundColor(.white)
@@ -44,12 +44,10 @@ struct BottomView: View {
             .sheet(isPresented: $showModal) {
                 NavigationView {
                     VStack {
-                        
                         LoginView(showModal: self.$showModal)
-                       
                     }
                     .navigationBarTitle("Login", displayMode: .inline)
-            
+                    
                     .navigationBarItems(leading: Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                         self.showModal = false
@@ -58,18 +56,12 @@ struct BottomView: View {
                             .resizable()
                             .frame(width: 20, height: 20, alignment: .leading)
                             .foregroundColor(.white)
-                            
                     }
                     )
                     .navigationBarColor(backgroundColor: #colorLiteral(red: 0.4588235294, green: 0.462745098, blue: 0.5019607843, alpha: 1), tintColor: .white)
-                    
                 }
-                
-                
             }
-            
             .frame(width: view.size.width, height: view.size.height)
-            
         }
         .padding(.bottom, 20)
         Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)).edgesIgnoringSafeArea(.all)
