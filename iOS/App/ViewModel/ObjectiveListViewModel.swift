@@ -25,8 +25,7 @@ class ObjectiveListViewModel: ObservableObject {
             switch result {
             case .success(let result):
                     self.objectives = result
-                print(self.objectives)
-                
+
             case .failure(let error):
                
                 switch error {

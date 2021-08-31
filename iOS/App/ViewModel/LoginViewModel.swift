@@ -34,14 +34,12 @@ class LoginViewModel: ObservableObject {
                             let data = Data(accessToken.utf8)
                             KeychainHelper.standard.save(data, service: "access-token", account: "desafioWarren")
                             
-                            
                             self.showProgressView = false
                             self.isAuthenticated = true
                             completion(true)
                         }
                     }
                     catch let error {
-                        print(error)
                     }
                     
                 case .failure(let error):
