@@ -45,7 +45,6 @@ struct ObjectivesListView: View {
                             }
                         }
                 }
-            
             .edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
         

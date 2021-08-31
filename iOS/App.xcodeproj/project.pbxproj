@@ -121,11 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				FE42F00B26DB0A5500A5A571 /* DesafioWarrenApp.swift */,
-				FE42F03226DB207200A5A571 /* Components */,
 				FE42EFD026DB000B00A5A571 /* Model */,
 				FE42EFFC26DB072600A5A571 /* View */,
 				FE42EFD326DB002500A5A571 /* ViewModel */,
 				FE42EFD126DB001700A5A571 /* Services */,
+				FE42F03226DB207200A5A571 /* Components */,
 				332C228023FEBCE1007823E5 /* Assets.xcassets */,
 				332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */,
 				332C228823FEBCE1007823E5 /* Info.plist */,

@@ -10,7 +10,7 @@ import SwiftUI
 import URLImage
 
 struct ObjectiveDetailImage: View {
-    var objetivos: Portfolio
+    var objetivos: ObjectiveViewModel
     
     var body: some View {
         GeometryReader { view in

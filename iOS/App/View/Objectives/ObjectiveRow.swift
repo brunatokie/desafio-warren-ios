@@ -11,7 +11,7 @@ import URLImage
 
 struct ObjectiveRow: View {
     
-   var objetivos: Portfolio
+   var objetivos: ObjectiveViewModel
    
     var body: some View {
         GeometryReader { view in

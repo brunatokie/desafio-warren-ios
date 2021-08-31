@@ -52,8 +52,7 @@ class APIService {
             return
         }
         
-        //Reading data from keychain
-        
+        //Read data from keychain
         let readData = KeychainHelper.standard.read(service: "access-token", account: "desafioWarren")!
         let readAccessToken = String(data: readData, encoding: .utf8)
         
