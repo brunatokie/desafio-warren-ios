@@ -32,10 +32,11 @@ struct LoginForm: View {
                         ProgressView()
                     }
                     Button(action: {
+                        showModal = false
                         loginVM.login { success in
                             authentication.updateValidation(success: success)
-                            showModal = false
-                            objectiveVM.getAllAccounts()
+                            
+                            
                         }
                     }) {
                         Image("right")
@@ -51,8 +52,8 @@ struct LoginForm: View {
             .foregroundColor(.white)
         }.background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
         .disabled(loginVM.showProgressView)
-        .alert(item: $loginVM.error) { error in
-            Alert(title: Text("Login Inválido"), message: Text(error.localizedDescription))
+        .alert(item: $loginVM.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         }
     }
 }

@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ObjectiveDetailForm: View {
     
-    var objetivos: ObjectiveViewModel
+    var objetivos: Portfolio
+    
     var body: some View {
         GeometryReader { view in
             Form {
@@ -20,7 +21,7 @@ struct ObjectiveDetailForm: View {
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text(objetivos.progress)
+                        Text("\(objetivos.progress)%")
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     }
@@ -29,7 +30,7 @@ struct ObjectiveDetailForm: View {
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text(objetivos.goalAmount)
+                        Text("R$ \(objetivos.formattedGoalAmount),00")
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     }
@@ -38,7 +39,7 @@ struct ObjectiveDetailForm: View {
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text(objetivos.goalDate)
+                        Text(objetivos.formattedGoalDate)
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     }                    

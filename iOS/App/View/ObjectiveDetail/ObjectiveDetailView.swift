@@ -10,9 +10,9 @@ import SwiftUI
 import URLImage
 
 struct ObjectiveDetailView: View {
-    var objetivos: ObjectiveViewModel
+    private var objetivos: Portfolio
     
-    init(objetivos : ObjectiveViewModel){
+    init(objetivos : Portfolio){
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.backgroundColor = UIColor(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1))
         let navBarAppearance = UINavigationBar.appearance()

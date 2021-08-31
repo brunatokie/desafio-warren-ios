@@ -11,10 +11,10 @@ import Combine
 
 class APIService {
 
-    func loginRequest(email: String, password: String, completion: @escaping (Result<LoginResponse, Authentication.AuthenticationError>) -> Void) {
+    func loginRequest(email: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void) {
         
         guard let url = URL(string: "https://enigmatic-bayou-48219.herokuapp.com/api/v2/account/login") else {
-            
+            completion(.failure(.invalidURL))
             return
             
         }
@@ -45,32 +45,46 @@ class APIService {
         }.resume()
     }
     
-    func getAllObjectives(token: String, completion: @escaping (Result<[Portfolio], NetworkError>) -> Void) {
+    func getAllObjectives(completion: @escaping (Result<[Portfolio], NetworkError>) -> Void) {
         
-        guard let url = URL(string: "https://enigmatic-bayou-48219.herokuapp.com/api/v2/portfolios/mine") else {
+        guard let url = URL(string: "https://enigmatic-bayou-48219.herokuapp.com/api/v2/portfolios/mine" ) else {
             completion(.failure(.invalidURL))
             return
         }
         
-        var request = URLRequest(url: url)
-        request.addValue(token, forHTTPHeaderField: "acess-token")
+        //Reading data from keychain
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let readData = KeychainHelper.standard.read(service: "access-token", account: "desafioWarren")!
+        let readAccessToken = String(data: readData, encoding: .utf8)
+        
+        if let token = readAccessToken {
+        var request = URLRequest(url: url)
+            request.addValue("\(token)", forHTTPHeaderField: "access-token")
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let data = data, error == nil else {
-                completion(.failure(.noData))
+                        
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(.invalidResponse))
                 return
             }
             
-            guard let accounts = try? JSONDecoder().decode([Portfolio].self, from: data) else {
-                completion(.failure(.decodingError))
+            guard let data = data else {
+                completion(.failure(.invalidData))
                 return
             }
             
-            completion(.success(accounts))
-            print(accounts)
-        }.resume()
-    }
+            do {
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(PortfolioResponse.self, from: data)
+                completion(.success(decodedResponse.portfolios))
+            } catch {
+                completion(.failure(.invalidData))
+            }
+        }
+        
+        task.resume()
 }
-
+    }}
 

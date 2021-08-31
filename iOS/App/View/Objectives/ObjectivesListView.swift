@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct ObjectivesListView: View {
+    
     @EnvironmentObject var authentication: Authentication
     @StateObject private var objectiveVM = ObjectiveListViewModel()
     
@@ -21,15 +22,11 @@ struct ObjectivesListView: View {
        }
     
     var body: some View {
-        
+        ZStack {
         NavigationView {
             GeometryReader { view in
-                VStack{
-                    ObjectiveHeaderView()
-                        .frame(width: view.size.width, height: 200, alignment: .top)
-                    
-                   
-                        List(objectiveVM.objectives, id: \.id) { obj in
+               
+                    List(objectiveVM.objectives, id: \.id) { obj in
                             NavigationLink(destination:
                                             ObjectiveDetailView(objetivos: obj)){
                                 ObjectiveRow(objetivos: obj)
@@ -38,8 +35,8 @@ struct ObjectivesListView: View {
                             }
                         }
                         .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                    .navigationTitle("Meus Objetivos")
                         
-                        .navigationTitle("")
                         .toolbar {
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button("Sair") {
@@ -47,11 +44,17 @@ struct ObjectivesListView: View {
                                 }
                             }
                         }
-                    }
                 }
             
             .edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
+        
+        .onAppear { objectiveVM.getAllAccounts()}
+        if objectiveVM.showProgressView { ProgressView() }
+       
+        } .alert(item: $objectiveVM.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+    }
     }
 }
 

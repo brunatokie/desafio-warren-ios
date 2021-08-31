@@ -10,13 +10,13 @@ import SwiftUI
 import URLImage
 
 struct ObjectiveDetailImage: View {
-    var objetivos: ObjectiveViewModel
+    var objetivos: Portfolio
     
     var body: some View {
         GeometryReader { view in
          
         ZStack (alignment: .top) {
-            if let url = URL(string: objetivos.imageRegular){
+            if let url = URL(string: objetivos.background.regular){
                 URLImage(url) { image in
                     image
                         .resizable()
@@ -24,12 +24,15 @@ struct ObjectiveDetailImage: View {
                         .frame(width: view.size.width - 40,  height: 370)
                         .clipped()
                         .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)), lineWidth: 1))
                         .shadow(radius: 10)
-                    
+                        
+                                   
                 }
             }
             VStack{
-                Text(objetivos.title)
+                Text(objetivos.name)
                     .font(.system(size: 30, weight: .heavy, design: .default))
                     .foregroundColor(Color(#colorLiteral(red: 0.9764705882, green: 0.568627451, blue: 0.007843137255, alpha: 1)))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)

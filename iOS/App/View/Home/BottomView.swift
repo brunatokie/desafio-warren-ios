@@ -58,7 +58,7 @@ struct BottomView: View {
                             .foregroundColor(.white)
                     }
                     )
-                    .navigationBarColor(backgroundColor: #colorLiteral(red: 0.4588235294, green: 0.462745098, blue: 0.5019607843, alpha: 1), tintColor: .white)
+                    .navigationBarColor(backgroundColor: #colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1), tintColor: .white)
                 }
             }
             .frame(width: view.size.width, height: view.size.height)
