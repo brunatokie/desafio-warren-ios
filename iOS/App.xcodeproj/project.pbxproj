@@ -25,8 +25,11 @@
 		FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */; };
 		FE42F05B26DB457E00A5A571 /* ObjectiveListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */; };
 		FE4E565A26DD3D9500796CBD /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E565926DD3D9500796CBD /* KeychainHelper.swift */; };
+		FE56631E26DE5536006901A7 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE56631D26DE5536006901A7 /* LoginViewModelTests.swift */; };
+		FE56632726DE6643006901A7 /* ObjectiveListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE56632626DE6643006901A7 /* ObjectiveListViewModelTests.swift */; };
+		FE56634426DE893E006901A7 /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE56634326DE893E006901A7 /* MockLoginService.swift */; };
+		FE56635226DEA543006901A7 /* MockObjectiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE56635126DEA543006901A7 /* MockObjectiveService.swift */; };
 		FE575EED26DBFDFC007123D4 /* ObjectiveRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */; };
-		FE575EF126DC09DE007123D4 /* objetivos.json in Resources */ = {isa = PBXBuildFile; fileRef = FE575EF026DC09DE007123D4 /* objetivos.json */; };
 		FE575F0D26DC2455007123D4 /* ObjectiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */; };
 		FE575F2126DC489F007123D4 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2026DC489F007123D4 /* URLImageStore */; };
 		FE575F2326DC489F007123D4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2226DC489F007123D4 /* URLImage */; };
@@ -69,8 +72,11 @@
 		FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesListView.swift; sourceTree = "<group>"; };
 		FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveListViewModel.swift; sourceTree = "<group>"; };
 		FE4E565926DD3D9500796CBD /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		FE56631D26DE5536006901A7 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		FE56632626DE6643006901A7 /* ObjectiveListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveListViewModelTests.swift; sourceTree = "<group>"; };
+		FE56634326DE893E006901A7 /* MockLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginService.swift; sourceTree = "<group>"; };
+		FE56635126DEA543006901A7 /* MockObjectiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjectiveService.swift; sourceTree = "<group>"; };
 		FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveRow.swift; sourceTree = "<group>"; };
-		FE575EF026DC09DE007123D4 /* objetivos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = objetivos.json; sourceTree = "<group>"; };
 		FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailView.swift; sourceTree = "<group>"; };
 		FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailForm.swift; sourceTree = "<group>"; };
 		FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailImage.swift; sourceTree = "<group>"; };
@@ -130,7 +136,6 @@
 				332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */,
 				332C228823FEBCE1007823E5 /* Info.plist */,
 				332C228223FEBCE1007823E5 /* Preview Content */,
-				FE575EF026DC09DE007123D4 /* objetivos.json */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 		332C229023FEBCE1007823E5 /* AppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FE56632126DE5668006901A7 /* ViewModel */,
 				332C229123FEBCE1007823E5 /* AppUITests.swift */,
 				332C229323FEBCE1007823E5 /* Info.plist */,
 			);
@@ -235,6 +241,17 @@
 			path = Objectives;
 			sourceTree = "<group>";
 		};
+		FE56632126DE5668006901A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE56631D26DE5536006901A7 /* LoginViewModelTests.swift */,
+				FE56634326DE893E006901A7 /* MockLoginService.swift */,
+				FE56632626DE6643006901A7 /* ObjectiveListViewModelTests.swift */,
+				FE56635126DEA543006901A7 /* MockObjectiveService.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FE575F3326DC5912007123D4 /* ObjectiveDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,7 +310,7 @@
 		332C226F23FEBCE0007823E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Warren;
 				TargetAttributes = {
@@ -336,7 +353,6 @@
 				332C228723FEBCE1007823E5 /* LaunchScreen.storyboard in Resources */,
 				332C228423FEBCE1007823E5 /* Preview Assets.xcassets in Resources */,
 				332C228123FEBCE1007823E5 /* Assets.xcassets in Resources */,
-				FE575EF126DC09DE007123D4 /* objetivos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +397,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE56634426DE893E006901A7 /* MockLoginService.swift in Sources */,
 				332C229223FEBCE1007823E5 /* AppUITests.swift in Sources */,
+				FE56631E26DE5536006901A7 /* LoginViewModelTests.swift in Sources */,
+				FE56632726DE6643006901A7 /* ObjectiveListViewModelTests.swift in Sources */,
+				FE56635226DEA543006901A7 /* MockObjectiveService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

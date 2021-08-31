@@ -14,12 +14,18 @@ class ObjectiveListViewModel: ObservableObject {
     @Published var objectives: [ObjectiveViewModel] = []
     @Published var showProgressView = false
     @Published var alertItem: AlertItem?
+    var apiService: ObjectiveServiceProtocol
+    
+    //Injeção do APIService no LoginViewModel
+    init(apiService: ObjectiveServiceProtocol = ObjectiveService()) {
+        self.apiService = apiService
+    }
     
     func getAllAccounts() {
         self.showProgressView = true
         
         
-        APIService().getAllObjectives {[self] (result) in
+        apiService.objectivesList {[self] (result) in
             DispatchQueue.main.async {
                 self.showProgressView = false
             switch result {
