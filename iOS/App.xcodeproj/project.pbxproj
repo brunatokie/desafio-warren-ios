@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,17 @@
 		FE42F04326DB211200A5A571 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04226DB211200A5A571 /* LoginView.swift */; };
 		FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F04626DB2BDD00A5A571 /* LoginForm.swift */; };
 		FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */; };
+		FE42F05B26DB457E00A5A571 /* ObjectiveListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */; };
+		FE4E565A26DD3D9500796CBD /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E565926DD3D9500796CBD /* KeychainHelper.swift */; };
+		FE575EED26DBFDFC007123D4 /* ObjectiveRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */; };
+		FE575EF126DC09DE007123D4 /* objetivos.json in Resources */ = {isa = PBXBuildFile; fileRef = FE575EF026DC09DE007123D4 /* objetivos.json */; };
+		FE575F0D26DC2455007123D4 /* ObjectiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */; };
+		FE575F2126DC489F007123D4 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2026DC489F007123D4 /* URLImageStore */; };
+		FE575F2326DC489F007123D4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FE575F2226DC489F007123D4 /* URLImage */; };
+		FE575F3726DC7B38007123D4 /* ObjectiveDetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */; };
+		FE575F3B26DC813C007123D4 /* ObjectiveDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */; };
+		FE69E03526DDBD6700A0D526 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69E03426DDBD6700A0D526 /* NetworkError.swift */; };
+		FE69E03926DDF2BC00A0D526 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69E03826DDF2BC00A0D526 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +67,15 @@
 		FE42F04226DB211200A5A571 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE42F04626DB2BDD00A5A571 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesListView.swift; sourceTree = "<group>"; };
+		FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveListViewModel.swift; sourceTree = "<group>"; };
+		FE4E565926DD3D9500796CBD /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveRow.swift; sourceTree = "<group>"; };
+		FE575EF026DC09DE007123D4 /* objetivos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = objetivos.json; sourceTree = "<group>"; };
+		FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailView.swift; sourceTree = "<group>"; };
+		FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailForm.swift; sourceTree = "<group>"; };
+		FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveDetailImage.swift; sourceTree = "<group>"; };
+		FE69E03426DDBD6700A0D526 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FE69E03826DDF2BC00A0D526 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE575F2326DC489F007123D4 /* URLImage in Frameworks */,
+				FE575F2126DC489F007123D4 /* URLImageStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +130,7 @@
 				332C228523FEBCE1007823E5 /* LaunchScreen.storyboard */,
 				332C228823FEBCE1007823E5 /* Info.plist */,
 				332C228223FEBCE1007823E5 /* Preview Content */,
+				FE575EF026DC09DE007123D4 /* objetivos.json */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -149,6 +172,7 @@
 			children = (
 				FE42F02126DB0BAF00A5A571 /* Authentication.swift */,
 				FE42F02926DB0D3600A5A571 /* APIService.swift */,
+				FE69E03426DDBD6700A0D526 /* NetworkError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -157,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FE42F02D26DB1D4B00A5A571 /* LoginViewModel.swift */,
+				FE42F05A26DB457E00A5A571 /* ObjectiveListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,9 +189,10 @@
 		FE42EFFC26DB072600A5A571 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE42F05126DB3C8300A5A571 /* Objectives */,
 				FE42F03126DB201700A5A571 /* Home */,
 				FE42F04C26DB396300A5A571 /* Login */,
+				FE42F05126DB3C8300A5A571 /* Objectives */,
+				FE575F3326DC5912007123D4 /* ObjectiveDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				FE42F03426DB20A800A5A571 /* NavigationBarColor.swift */,
+				FE4E565926DD3D9500796CBD /* KeychainHelper.swift */,
+				FE69E03826DDF2BC00A0D526 /* LoadingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -202,8 +230,19 @@
 			isa = PBXGroup;
 			children = (
 				FE42F05226DB3C9B00A5A571 /* ObjectivesListView.swift */,
+				FE575EEC26DBFDFC007123D4 /* ObjectiveRow.swift */,
 			);
 			path = Objectives;
+			sourceTree = "<group>";
+		};
+		FE575F3326DC5912007123D4 /* ObjectiveDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FE575F0C26DC2455007123D4 /* ObjectiveDetailView.swift */,
+				FE575F3A26DC813C007123D4 /* ObjectiveDetailImage.swift */,
+				FE575F3626DC7B38007123D4 /* ObjectiveDetailForm.swift */,
+			);
+			path = ObjectiveDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +262,8 @@
 			);
 			name = App;
 			packageProductDependencies = (
+				FE575F2026DC489F007123D4 /* URLImageStore */,
+				FE575F2226DC489F007123D4 /* URLImage */,
 			);
 			productName = App;
 			productReference = 332C227723FEBCE0007823E5 /* Warren.app */;
@@ -274,6 +315,9 @@
 				Base,
 			);
 			mainGroup = 332C226E23FEBCE0007823E5;
+			packageReferences = (
+				FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 332C227823FEBCE0007823E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +336,7 @@
 				332C228723FEBCE1007823E5 /* LaunchScreen.storyboard in Resources */,
 				332C228423FEBCE1007823E5 /* Preview Assets.xcassets in Resources */,
 				332C228123FEBCE1007823E5 /* Assets.xcassets in Resources */,
+				FE575EF126DC09DE007123D4 /* objetivos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +356,22 @@
 			files = (
 				FE42F05326DB3C9B00A5A571 /* ObjectivesListView.swift in Sources */,
 				FE42F03F26DB20FD00A5A571 /* BottomView.swift in Sources */,
+				FE69E03926DDF2BC00A0D526 /* LoadingView.swift in Sources */,
+				FE4E565A26DD3D9500796CBD /* KeychainHelper.swift in Sources */,
 				FE42F01626DB0AB700A5A571 /* Models.swift in Sources */,
 				FE42F04726DB2BDD00A5A571 /* LoginForm.swift in Sources */,
 				FE42F02A26DB0D3600A5A571 /* APIService.swift in Sources */,
+				FE575F0D26DC2455007123D4 /* ObjectiveDetailView.swift in Sources */,
+				FE575EED26DBFDFC007123D4 /* ObjectiveRow.swift in Sources */,
 				FE42F03526DB20A800A5A571 /* NavigationBarColor.swift in Sources */,
+				FE575F3B26DC813C007123D4 /* ObjectiveDetailImage.swift in Sources */,
 				FE42F02E26DB1D4B00A5A571 /* LoginViewModel.swift in Sources */,
 				FE42F00C26DB0A5500A5A571 /* DesafioWarrenApp.swift in Sources */,
 				FE42EFF926DB071200A5A571 /* HomeLoginView.swift in Sources */,
+				FE69E03526DDBD6700A0D526 /* NetworkError.swift in Sources */,
+				FE42F05B26DB457E00A5A571 /* ObjectiveListViewModel.swift in Sources */,
 				FE42F02226DB0BAF00A5A571 /* Authentication.swift in Sources */,
+				FE575F3726DC7B38007123D4 /* ObjectiveDetailForm.swift in Sources */,
 				FE42F04326DB211200A5A571 /* LoginView.swift in Sources */,
 				FE42F03B26DB20E900A5A571 /* HeaderView.swift in Sources */,
 			);
@@ -575,6 +628,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE575F2026DC489F007123D4 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		FE575F2226DC489F007123D4 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE575F1F26DC489F007123D4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 332C226F23FEBCE0007823E5 /* Project object */;
 }

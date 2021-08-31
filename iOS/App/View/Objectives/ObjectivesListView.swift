@@ -8,24 +8,53 @@
 
 import SwiftUI
 
+
 struct ObjectivesListView: View {
+    
     @EnvironmentObject var authentication: Authentication
+    @StateObject private var objectiveVM = ObjectiveListViewModel()
+    
+    init(){
+           let navigationBarAppearance = UINavigationBarAppearance()
+           navigationBarAppearance.backgroundColor = UIColor(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1))
+           UIScrollView.appearance().backgroundColor = UIColor(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1))
+        
+       }
     
     var body: some View {
+        ZStack {
         NavigationView {
-            VStack {
-                Text("Tela carregou")
-                
-            }
-            .navigationTitle("Meus Objetivos")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Log out") {
-                        authentication.updateValidation(success: false)
-                    }
+            GeometryReader { view in
+               
+                    List(objectiveVM.objectives, id: \.id) { obj in
+                            NavigationLink(destination:
+                                            ObjectiveDetailView(objetivos: obj)){
+                                ObjectiveRow(objetivos: obj)
+                                    .frame(width: view.size.width, height: 180)
+                                    .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                            }
+                        }
+                        .listRowBackground(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)))
+                    .navigationTitle("Meus Objetivos")
+                        
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button("Sair") {
+                                    authentication.updateValidation(success: false)
+                                }
+                            }
+                        }
                 }
-            }
-        }
+            
+            .edgesIgnoringSafeArea(.all)
+        }.navigationViewStyle(StackNavigationViewStyle())
+        
+        .onAppear { objectiveVM.getAllAccounts()}
+        if objectiveVM.showProgressView { ProgressView() }
+       
+        } .alert(item: $objectiveVM.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+    }
     }
 }
 

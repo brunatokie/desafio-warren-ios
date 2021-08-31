@@ -15,25 +15,11 @@ struct LoginView: View {
     
     var body: some View {
         GeometryReader { view in
-            
             VStack (spacing: .none){
-                
                 LoginForm(showModal: _showModal)
-                
-                
-                Button("Esqueci a senha") {
-                    
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .foregroundColor(.white)
-                .padding(.bottom, view.size.height * 0.45)
-                .padding(.leading,25)
             }
-            .padding(.top, view.size.height * 0.3)
-            
+            .padding(.top, view.size.height * 0.4)
             .background(Color(#colorLiteral(red: 0.2274509804, green: 0.2235294118, blue: 0.2509803922, alpha: 1)).edgesIgnoringSafeArea(.all))
-            
-            
         }
     }
 }
