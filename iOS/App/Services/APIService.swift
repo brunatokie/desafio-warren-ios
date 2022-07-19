@@ -7,9 +7,17 @@
 //
 
 import Foundation
-import Combine
 
-class APIService {
+//Protocolos para isolar a ViewModel para Testes
+protocol LoginServiceProtocol : class {
+    func loginRequest(email: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void)
+}
+
+protocol ObjectiveServiceProtocol: class {
+    func objectivesList(completion: @escaping (Result<[Portfolio], NetworkError>) -> Void)
+}
+
+class LoginService: LoginServiceProtocol {
 
     func loginRequest(email: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void) {
         
@@ -44,16 +52,18 @@ class APIService {
             completion(.success(loginResponse))
         }.resume()
     }
+}
     
-    func getAllObjectives(completion: @escaping (Result<[Portfolio], NetworkError>) -> Void) {
+class ObjectiveService: ObjectiveServiceProtocol {
+    
+    func objectivesList(completion: @escaping (Result<[Portfolio], NetworkError>) -> Void) {
         
         guard let url = URL(string: "https://enigmatic-bayou-48219.herokuapp.com/api/v2/portfolios/mine" ) else {
             completion(.failure(.invalidURL))
             return
         }
         
-        //Reading data from keychain
-        
+        //Read data from keychain
         let readData = KeychainHelper.standard.read(service: "access-token", account: "desafioWarren")!
         let readAccessToken = String(data: readData, encoding: .utf8)
         
@@ -87,4 +97,5 @@ class APIService {
         task.resume()
 }
     }}
+
 
